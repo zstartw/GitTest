@@ -44,9 +44,27 @@ $ git help config
 $ git init
 $ git add LICENSE
 $ git commit -m 'initial project version'
+$ git push orign master
 $ git clone https://github.com/libgit2/libgit2 // 支持https:// , git://或者SSH,比如 user@server:path/to/repo.git
 $ git status //检查当前文件状态
 ```
+
+创建tag
+```
+$ git tag -a v1.0 -m 'my version' //创建附注标签
+$ git show v1.0 //看到标签信息与对应的提交信息
+$ git tag v1.0-lw //创建轻量标签
+```
+
+后期打tag
+```
+$ git log --pretty=oneline//查看日志
+$ git tag -a v1.2 9fceb02//指定提交的校验和(或部分校验和)
+```
+
+Note: 默认情况下,git push 命令并不会传送标签到远程仓库服务器上。 在创建完标签后你必须显式地推送标签到
+      共享服务器上。 这个过程就像共享远程分支一样 - 你可以运行 git push origin [tagname]。
+
 # GitTest
 git 相关操作
 
