@@ -49,6 +49,20 @@ $ git clone https://github.com/libgit2/libgit2 // 支持https:// , git://或者S
 $ git status //检查当前文件状态
 ```
 
+分支
+```
+$ git checkout -b hotfix//切换到hotfix分支
+$ git branch//查看当前分支
+$ git branch -d hotfix //删除分支
+```
+
+合并分支的代码
+
+```
+$ git checkout master
+$ git merge hotfix
+```
+
 创建tag
 ```
 $ git tag -a v1.0 -m 'my version' //创建附注标签
